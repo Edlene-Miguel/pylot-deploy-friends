@@ -3,6 +3,30 @@
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
   </head>
   <body>
-    The best place to start is the "WelcomeController.py" file in app/controllers.
+
+  		<form action = '/friends/new'>
+  			<input type = 'submit' value = 'Add'>
+  		</form>
+
+  		{% for friend in friends %}
+  			<p>First Name: {{ friend['first_name'] }}</p>
+  			<p>Last Name : {{ friend['last_name'] }}</p>
+  			<p>Occupation: {{ friend['occupation'] }}</p>
+  			<p>Known For: {{ friend['known_for'] }}</p>
+
+  			<form action = "/friends/{{friend['id']}}">
+  				<input type = 'submit' value = 'Show'>
+  			</form>
+
+  			<form action = "/friends/{{friend['id']}}/edit">
+  				<input type = 'submit' value = 'Edit'>
+  			</form>
+
+  			<form action = "/friends/deletepage/{{friend['id']}}">
+  				<input type = 'submit' value = 'Delete'>
+  			</form>
+  			
+  		{% endfor %}
+
   </body>
 </html>

@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  		<form action = "/friends/{{friend['id']}}/update" method = 'post'>
+  			First Name: <input type = 'text' name = 'first_name' value = "{{ friend['first_name'] }}">
+  			Last Name: <input type = 'text' name = 'last_name' value = "{{friend['last_name']}}">
+  			Occupation: <input type = 'text' name = 'occupation' value = "{{friend['occupation']}}">
+  			Known For: <input type = 'text' name = 'known_for' value = "{{friend['known_for']}}">
+
+  			<input type = 'submit' value = 'Update'>
+  			
+  		</form>
+  </body>
+</html>

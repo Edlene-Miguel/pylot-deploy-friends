@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  		<p>First Name: {{ friend['first_name'] }}</p>
+  		<p>Last Name: {{ friend['last_name'] }}</p>
+  		<p>Occupation: {{ friend['occupation'] }}</p>
+  		<p>Known For: {{ friend['known_for'] }}</p>
+
+  		<form action ="/friends/{{ friend['id'] }}/edit">
+  			<input type = 'submit' value = 'Edit'>
+  		</form>
+
+  		<form action ="/">
+  			<input type = 'submit' value = 'Back'>
+  		</form>
+  </body>
+</html>
